@@ -1,9 +1,9 @@
-# Lecturas
+# Reading notes
 
-Un fichero por lectura: `AAAA-MM-DD-titulo-corto.md`, con 5 líneas:
+One file per paper or post: `YYYY-MM-DD-short-title.md`, five lines:
 
-1. Qué problema ataca
-2. Idea principal
-3. Resultado o número clave
-4. Qué me llevo para mi harness, mis evals o el TFG
-5. Qué no me convence
+1. What problem it tackles
+2. Main idea
+3. Key result or number
+4. What I take away for my harness, my evals or my thesis
+5. What I'm not convinced by

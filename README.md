@@ -1,39 +1,41 @@
 # agents-lab
 
-Mi laboratorio para aprender LLMs, agentes, harness engineering, MCP, evals y system design (oct 2026 – may 2027).
+My lab for learning LLMs, agents, harness engineering, MCP, evals and system design (Oct 2026 – May 2027).
 
-**Coste cero:** todo funciona con modelos locales vía [Ollama](https://ollama.com). Sin API keys ni tarjetas.
+**Zero cost:** everything runs on local models via [Ollama](https://ollama.com). No API keys, no credit card.
 
-## Estructura
+## Structure
 
-| Carpeta | Qué va aquí | Semana del plan |
+| Folder | What goes here | Plan week |
 | --- | --- | --- |
-| `semana-01/` | Métricas de un LLM: tokens, latencia, structured outputs | 1 |
-| `nanogpt/` | GPT propio entrenado en Colab o Kaggle (GPU gratis) | 2 |
-| `harness/` | Mi bucle de agente desde cero: tools, contexto, permisos, sandbox | 3–4 |
-| `mcp/` | Servidor MCP propio | 5 |
-| `evals/` | Casos de eval, LLM-as-judge local, resultados | 6 |
-| `notes/system-design/` | Un diseño de sistema LLM por semana | 7 → mayo |
-| `notes/papers/` | Resumen de 5 líneas por paper o post leído | siempre |
+| `week-01/` | LLM metrics: tokens, latency, structured outputs | 1 |
+| `nanogpt/` | My own GPT trained on Colab or Kaggle (free GPU) | 2 |
+| `harness/` | My agent loop from scratch: tools, context, permissions, sandbox | 3–4 |
+| `mcp/` | My own MCP server | 5 |
+| `evals/` | Eval cases, local LLM-as-judge, results | 6 |
+| `notes/system-design/` | One LLM system design per week | 7 → May |
+| `notes/papers/` | 5-line summary of each paper or post I read | ongoing |
+| `notes/` | Findings from each session | ongoing |
 
-## Puesta en marcha (Windows)
+## Setup (Windows)
 
-1. Instala Ollama desde https://ollama.com y ábrelo (se queda en la bandeja del sistema).
-2. Descarga un modelo pequeño (unos 2 GB):
+1. Install Ollama from https://ollama.com and open it (it lives in the system tray).
+2. Pull the models:
    ```
-   ollama pull qwen2.5:3b
+   ollama pull qwen3.5:4b
+   ollama pull qwen3.5:9b
    ```
-3. Ejecuta el script de la semana 1 (solo necesita Python 3.10+, sin `pip install`):
+3. Run the week 1 script (Python 3.10+ only, no `pip install`):
    ```
-   python semana-01/llm_metrics.py
+   python week-01/llm_metrics.py
    ```
 
-Si tu portátil va justo de RAM, prueba `qwen2.5:1.5b`. Si va sobrado, `qwen2.5:7b` o `llama3.1:8b` para comparar.
+On a CPU-only laptop, use `qwen3.5:4b` day to day and `qwen3.5:9b` for occasional comparisons.
 
-## Ejercicios de la semana 1
+## Week 1 exercises
 
-- [ ] Ejecuta el script con un modelo y guarda los resultados.
-- [ ] Compara dos tamaños de modelo (p. ej. 1.5b vs 3b): ¿cuánto ganas en aciertos y cuánto pierdes en velocidad?
-- [ ] Cambia `--runs` a 5 y fíjate en la diferencia entre la primera ejecución (carga del modelo) y las siguientes.
-- [ ] Usa `--precio-in` y `--precio-out` con los precios públicos de un proveedor para estimar qué costaría la misma carga en la nube.
-- [ ] Escribe 5 líneas en `notes/` sobre qué te ha sorprendido.
+- [x] Run the script with a model and save the results.
+- [x] Compare two model sizes (4b vs 9b): how much accuracy do you gain, and how much speed do you lose?
+- [ ] Write a harder extraction case (computed values, numbers in words, two companies) and see where the model breaks.
+- [ ] Use `--price-in` and `--price-out` with a provider's public prices to estimate what the same workload would cost in the cloud.
+- [x] Write down what surprised you in `notes/`.

@@ -1,3 +1,3 @@
 # nanogpt
 
-Semana 2. GPT propio siguiendo "Let's build GPT" de Karpathy. Entrénalo en Google Colab o en Kaggle Notebooks: GPU gratis, sin tarjeta.
+Week 2. My own GPT, following Karpathy's "Let's build GPT". Trained on Google Colab or Kaggle Notebooks: free GPU, no credit card.

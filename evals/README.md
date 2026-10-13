@@ -1,3 +1,3 @@
 # evals
 
-Semana 6. Casos en `casos.jsonl`, un modelo local como juez (LLM-as-judge) y resultados comparando modelos y estrategias de contexto.
+Week 6. Cases in `cases.jsonl`, a local model as judge (LLM-as-judge), and results comparing models and context strategies.
