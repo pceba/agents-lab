@@ -1,6 +1,8 @@
 # harness
 
-Weeks 3–4. My own agent loop from scratch, no frameworks, against a local Ollama model with tool calling (e.g. `qwen3.5:4b` or `qwen3.5:9b`).
+Roadmap steps 4–7. My own agent from scratch, no frameworks, against a local Ollama model with tool calling (`qwen3.5:4b` / `qwen3.5:9b`).
 
-- v0: loop + 3 tools + stop conditions
-- v1: sandboxed file and shell tools, permissions (ask for confirmation), context compaction
+- Step 4: single tool call
+- Step 5 (v0): agent loop + 3 tools + stop conditions (max steps, max tokens, timeout)
+- Step 6 (v1): least-privilege tools in a sandbox, human approval for risky actions, per-section token budget, context compaction, checkpoint/resume
+- Step 7: 4b → 9b model router, measured with evals

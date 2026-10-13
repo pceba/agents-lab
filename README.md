@@ -4,16 +4,18 @@ My lab for learning LLMs, agents, harness engineering, MCP, evals and system des
 
 **Zero cost:** everything runs on local models via [Ollama](https://ollama.com). No API keys, no credit card.
 
+What I'm working on next: see **[ROADMAP.md](ROADMAP.md)**.
+
 ## Structure
 
-| Folder | What goes here | Plan week |
+| Folder | What goes here | Roadmap step |
 | --- | --- | --- |
 | `week-01/` | LLM metrics: tokens, latency, structured outputs | 1 |
-| `nanogpt/` | My own GPT trained on Colab or Kaggle (free GPU) | 2 |
-| `harness/` | My agent loop from scratch: tools, context, permissions, sandbox | 3–4 |
-| `mcp/` | My own MCP server | 5 |
-| `evals/` | Eval cases, local LLM-as-judge, results | 6 |
-| `notes/system-design/` | One LLM system design per week | 7 → May |
+| `evals/` | Eval cases, trajectory grading, local LLM-as-judge | 2, 9 |
+| `nanogpt/` | My own GPT trained on Colab or Kaggle (free GPU) | 3 |
+| `harness/` | My agent from scratch: tools, token budget, permissions, checkpoints, routing | 4–7 |
+| `mcp/` | My own MCP server | 8 |
+| `notes/system-design/` | One LLM system design per week | ongoing |
 | `notes/papers/` | 5-line summary of each paper or post I read | ongoing |
 | `notes/` | Findings from each session | ongoing |
 
@@ -32,10 +34,4 @@ My lab for learning LLMs, agents, harness engineering, MCP, evals and system des
 
 On a CPU-only laptop, use `qwen3.5:4b` day to day and `qwen3.5:9b` for occasional comparisons.
 
-## Week 1 exercises
-
-- [x] Run the script with a model and save the results.
-- [x] Compare two model sizes (4b vs 9b): how much accuracy do you gain, and how much speed do you lose?
-- [ ] Write a harder extraction case (computed values, numbers in words, two companies) and see where the model breaks.
-- [ ] Use `--price-in` and `--price-out` with a provider's public prices to estimate what the same workload would cost in the cloud.
-- [x] Write down what surprised you in `notes/`.
+Optional: use `--price-in` and `--price-out` with a provider's public prices to estimate what the same workload would cost in the cloud.
