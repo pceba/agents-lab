@@ -25,13 +25,14 @@ What I'm working on next: see **[ROADMAP.md](ROADMAP.md)**.
 2. Pull the models:
    ```
    ollama pull qwen3.5:4b
-   ollama pull qwen3.5:9b
+   ollama pull gemma4:e4b-it-qat
+   ollama pull qwen3.5:9b   # optional, slow on CPU
    ```
 3. Run the week 1 script (Python 3.10+ only, no `pip install`):
    ```
    python week-01/llm_metrics.py
    ```
 
-On a CPU-only laptop, use `qwen3.5:4b` day to day and `qwen3.5:9b` for occasional comparisons.
+On a CPU-only laptop with 16 GB RAM, the main pair is `qwen3.5:4b` and `gemma4:e4b-it-qat` (Gemma 4 E4B, quantization-aware build, native function calling). `qwen3.5:9b` is only for occasional comparisons.
 
 Optional: use `--price-in` and `--price-out` with a provider's public prices to estimate what the same workload would cost in the cloud.

@@ -11,17 +11,17 @@ An ordered chain of steps, not a schedule. Each step builds on the previous one 
 ## Step 1 · Break the model
 - [x] Measure tokens, latency and structured outputs (`week-01/llm_metrics.py`)
 - [ ] Write a hard extraction case myself: a value that must be computed, numbers written in words, a second company as a distractor
-- [ ] Compare `qwen3.5:4b` vs `qwen3.5:9b` on it
+- [ ] Compare `qwen3.5:4b` vs `gemma4:e4b-it-qat` on it (`qwen3.5:9b` optional)
 
 **Learn:** where small models fail, and whether size fixes it.
-**Done when:** my notes have a 4b vs 9b accuracy table for the hard case.
+**Done when:** my notes have a Qwen vs Gemma accuracy table for the hard case.
 
 ## Step 2 · First real eval
 - [ ] 10 extraction cases (easy, hard, adversarial) stored in `evals/cases.jsonl`
 - [ ] One command that prints accuracy per model
 
 **Learn:** the core habit of the whole plan. From here on, every change (prompt, model, harness) gets measured.
-**Done when:** the command prints something like `4b: 7/10 · 9b: 9/10`.
+**Done when:** the command prints something like `qwen3.5:4b: 7/10 · gemma4:e4b: 8/10`.
 
 ## Step 3 · Understand the model from the inside
 - [ ] 3Blue1Brown, transformer chapters
@@ -54,9 +54,9 @@ An ordered chain of steps, not a schedule. Each step builds on the previous one 
 **Learn:** what separates a toy from something deployable. My small context window turns budgeting into a real design exercise.
 **Done when:** it survives a long task, asks before writing, and resumes after being killed.
 
-## Step 7 · Model routing (4b → 9b)
-- [ ] Router: `qwen3.5:4b` by default, escalate to `qwen3.5:9b` only for hard tasks or low confidence
-- [ ] Measure with my evals: quality gained vs latency added, compared to always-4b and always-9b
+## Step 7 · Model routing
+- [ ] Router: the model that wins my evals by default, escalate to the other one (or `qwen3.5:9b`) only for hard tasks or low confidence
+- [ ] Measure with my evals: quality gained vs latency added, compared to always using a single model
 
 **Learn:** model cascades and cost/latency trade-offs, the core of LLM system design.
 **Done when:** I have a table showing the router beats both single-model baselines on at least one axis.

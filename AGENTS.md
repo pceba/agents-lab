@@ -6,7 +6,7 @@ Project rules for agents-lab, shared by Claude Code and OpenCode. Global rules (
 Pablo's lab for learning LLMs, agents, harness engineering, MCP, evals and system design (Oct 2026 to May 2027). The plan is in `ROADMAP.md`: an ordered chain of steps, always work on the first unchecked one unless told otherwise.
 
 ## Hard constraints
-- **Zero cost.** Code in this repo runs on local models via Ollama (`qwen3.5:4b` by default, `qwen3.5:9b` for comparisons). Never add paid APIs, API keys or credit-card services to the project code.
+- **Zero cost.** Code in this repo runs on local models via Ollama (main pair: `qwen3.5:4b` and `gemma4:e4b-it-qat`; `qwen3.5:9b` only for occasional comparisons). Never add paid APIs, API keys or credit-card services to the project code.
 - **CPU-only Windows laptop**, 4,096-token default context. Keep things light.
 - **No frameworks for the harness** (no LangChain, LangGraph, etc.). The point is to build it from scratch to learn.
 - Python 3.10+, standard library first. Ask before adding a dependency.
